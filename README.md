@@ -1,1 +1,6 @@
 # sql-challenge
+
+<h2>Evaluating the data and putting together the ERD</h2>
+<p>I opened up all the CSVs and used QuickDBD (app.quickdatabasediagrams.com) to put together my entity relationship diagram and to figure out how the tables were related. I set up the primary keys for each table and figured out how to link them together. Through this process I also placed them in the order I wanted to create them so that all the key references would work (titles, employees, salaries, departments, department managers, department employees).</p>
+<p>Then in Postgres I started a new query tool and input my table schema. From class questions I knew there was an issue with the dept_employee table since employees are assigned to multiple departments and therefore the emp_no cannot be the primary key since it is not unique. I researched composite keys and found a good explainer on objectrocket.com (https://kb.objectrocket.com/postgresql/postgresql-composite-primary-keys-629). That helped me to set up the composite key that reference both emp_no and dept_no to get a unique value that could act as the key. Created all the tables successfully.</p>
+<p>The import went smoothly - I saw the hint about importing in the same order that the tables were created and did not run into any issues.</p>
